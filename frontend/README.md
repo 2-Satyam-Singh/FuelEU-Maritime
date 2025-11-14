@@ -1,12 +1,8 @@
 first we run backend like this 
+-> fuel-eu-dashboard/
+    cd Backend
+    python3 server.py
 
-python3 server.py
-
-then run site for this 
-
-cd .. 
-
-$ ls
-
- cd frontend
- npm start
+-> fuel-eu-dashboard/
+    cd frontend
+    npm start
