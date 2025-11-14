@@ -1,0 +1,131 @@
+@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@400;500;600&display=swap');
+
+:root {
+  --font-heading: 'Space Grotesk', 'Inter', system-ui, sans-serif;
+  --font-body: 'Inter', 'Space Grotesk', system-ui, sans-serif;
+  --bg-page: radial-gradient(circle at 12% 20%, rgba(99, 102, 241, 0.15) 0%, transparent 42%),
+             radial-gradient(circle at 88% 12%, rgba(236, 72, 153, 0.25) 0%, transparent 38%),
+             linear-gradient(180deg, #eef2ff 0%, #f8faff 60%, #ffffff 100%);
+  --bg-card: rgba(255, 255, 255, 0.92);
+  --glass-border: rgba(255, 255, 255, 0.65);
+  --shadow-card: 0 25px 80px rgba(15, 23, 42, 0.12);
+  --text-primary: #446dca;
+  --text-muted: #64748b;
+  --accent-indigo: #49b33f;
+  --accent-purple: #a855f7;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: var(--font-body);
+  color: var(--text-primary);
+  min-height: 100vh;
+  background: var(--bg-page);
+  -webkit-font-smoothing: antialiased;
+  line-height: 1.6;
+}
+
+#root,
+.App {
+  min-height: 100vh;
+}
+
+.app-surface {
+  background: var(--bg-page);
+  padding: 2rem 1rem 4rem 1rem;
+}
+
+.dashboard-shell {
+  color: var(--text-primary);
+  font-family: var(--font-body);
+}
+
+/* Headings */
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-heading);
+  letter-spacing: 0.05em;  /* Increased spacing for readability */
+  margin-bottom: 1rem;
+  color: var(--accent-indigo);
+}
+
+/* Body text */
+p, span, label, th, td {
+  font-family: var(--font-body);
+  color: var(--text-primary);
+  letter-spacing: 0.02em;  /* Slight spacing for readability */
+}
+
+/* Glass card */
+.glass-card {
+  background: var(--bg-card);
+  border: 1px solid var(--glass-border);
+  box-shadow: var(--shadow-card);
+  backdrop-filter: blur(18px);
+  border-radius: 1rem;
+  padding: 1.5rem;
+  margin-bottom: 1.5rem;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.glass-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 35px 90px rgba(15, 23, 42, 0.2);
+}
+
+/* Tab rail */
+.tab-rail {
+  background: rgba(194, 198, 209, 0.95);
+  border: 1px solid rgba(255, 255, 255, 0.65);
+  box-shadow: 0 18px 45px rgba(15, 23, 42, 0.08);
+  backdrop-filter: blur(16px);
+  border-radius: 0.75rem;
+  padding: 0.5rem 1rem;
+  margin-bottom: 1rem;
+}
+
+/* Buttons */
+.btn-gradient {
+  background-image: linear-gradient(120deg, var(--accent-indigo), var(--accent-purple));
+  box-shadow: 0 12px 35px rgba(99, 102, 241, 0.35);
+  color: #fff;
+  padding: 0.7rem 1.5rem;
+  border-radius: 0.5rem;
+  font-weight: 600;
+  letter-spacing: 0.05em;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+.btn-gradient:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 18px 50px rgba(99, 102, 241, 0.4);
+}
+
+/* Chips */
+.chip-soft {
+  border-radius: 999px;
+  padding: 0.35rem 0.9rem;
+  background: rgba(99, 102, 241, 0.08);
+  color: var(--accent-indigo);
+  font-weight: 600;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  font-size: 0.875rem;
+}
+
+/* Table headers */
+.table-head {
+  text-transform: uppercase;
+  letter-spacing: 0.1em;  /* Spacing between letters */
+  font-size: 0.75rem;
+  color: var(--text-muted);
+  padding: 0.75rem 1rem;
+}
+
+/* Optional: Table cells */
+td, th {
+  padding: 0.75rem 1rem;
+}
